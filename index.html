@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Joey Florentino - Frontend Developer</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div><h1>Joey Florentino</h1><span class="eyebrow">Frontend Developer</span></div>
+        </header>
+        <section class="container">
+			<div class="block">
+                <a href="https://www.gurneysresorts.com/" target="_blank">
+                    <img src="images/montauk-gallery-resortmontauk-resort-gallery-1440x1440_0.jpg" alt="Gurney's Resort Montauk">
+				    <div class="eyebrow">Gurney's Resorts</div>
+                </a>
+			</div>
+
+			<div class="block">
+                <a href="https://aspenstreetlodge.com/" target="_blank">
+                    <img src="images/Homepage-Hero-Desktop-RET-NAV.jpg" alt="Aspen Street Lodge">
+                    <div class="eyebrow">Aspen Street Lodge</div>
+                </a>
+			</div>
+
+            <div class="block">
+                <a href="https://waterlinesquare.com/" target="_blank">
+                    <img src="images/wsq2-livingroom-1.jpg" alt="Waterline Square NYC">
+                    <div class="eyebrow">Waterline Square</div>
+                </a>
+			</div>
+
+            <div class="block">
+                <a href="https://www.coho.com.ph/" target="_blank">
+                    <img src="images/120134275_379698406768166_7531773499598188963_o.jpg" alt="COHO by Vista Land">
+                    <div class="eyebrow">COHO by Vista Land</div>
+                </a>
+			</div>
+
+			<div class="block">
+                <a href="https://teviantbeauty.com/" target="_blank">
+                    <img src="images/LipSpell_1000x.png" alt="Teviant">
+                    <div class="eyebrow">Teviant</div>
+                </a>
+			</div>
+
+			<div class="block">
+                <a href="https://thewatchstore.com.ph/" target="_blank">
+                    <img src="images/Aries-gold-watch.jpg" alt="The Watch Store">
+                    <div class="eyebrow">The Watch Store</div>
+                </a>
+			</div>
+
+		</section>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="script.js"></script>
+        <script>
+
+			var blocks = document.getElementsByClassName('block');
+			var container = document.getElementsByClassName('container');
+			var hs = new HorizontalScroll.default({
+				blocks : blocks,
+				container: container,
+				// isAnimated: true,
+				springEffect: 0.8
+			});
+
+            $('.block img').on('mouseover', function(event){
+                $('.block img').not($(this)).addClass('hover');
+            });
+
+            $('.block img').on('mouseout', function(){
+                $('.block img').not($(this)).removeClass('hover');
+            });
+
+		</script>
+    </body>
+</html>
