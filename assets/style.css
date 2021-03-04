@@ -160,14 +160,6 @@ header h1 {
         font-size: 50px;
     }
 
-    body {
-        justify-content: space-evenly;
-    }
-
-    header {
-        margin-bottom: 0;
-    }
-
     header h1 {
         font-size: 40px;
         line-height: 50px;
@@ -177,7 +169,7 @@ header h1 {
 @media (min-width: 1024px) {
 
     .works-item {
-        height: 60vh;
+        height: 55vh;
         margin: 0 30px;
     }
 
@@ -207,6 +199,14 @@ header h1 {
     
     .heading-2 span {
         font-size: 70px;
+    }
+
+    body {
+        justify-content: space-evenly;
+    }
+
+    header {
+        margin-bottom: 0;
     }
 }
 
