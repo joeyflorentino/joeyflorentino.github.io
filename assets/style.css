@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-color: #161616;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-family: 'Work Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: 0.03em;
+}
+
+.eyebrow {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.works .slick-list {
+    overflow: hidden;
+}
+
+.works .slick-track {
+    display: flex;
+}
+
+.works-item.slick-active .heading-2 {
+    opacity: 1;
+}
+
+.works-item {
+    position: relative;
+    height: 30vh;
+    margin: 0 10px;
+}
+
+.works-item img, .works-item video {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: all 600ms;
+}
+
+.works-item img.hover, .works-item video.hover {
+    -webkit-filter: grayscale(100%);
+       -moz-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+         -o-filter: grayscale(100%);
+            filter: grayscale(100%);
+            filter: black;
+}
+
+.works-item .heading-2 {
+    opacity: 0;
+    font-family: 'Work Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.03em;
+    position: absolute;
+    color: #fff;
+    bottom: 20px;
+    left: -10px;
+    transition: opacity 600ms;
+}
+
+.heading-2 span {
+    display: block;
+    font-size: 34px;
+    font-weight: 600;
+}
+
+@-webkit-keyframes fadeInUpSD {
+    0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    }
+
+    100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+    }
+}
+
+@keyframes fadeInUpSD {
+    0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    }
+
+    100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+    }
+}
+
+.fadeInUpSD {
+    -webkit-animation-name: fadeInUpSD;
+    animation-name: fadeInUpSD;
+}
+
+.slick-active .heading-2 {
+    animation-name: fadeInUpSD;
+    animation-duration: 1200ms;
+    opacity: 1;
+    width: 100%;
+}
+
+@media (min-width: 720px) {
+    .works-item {
+        height: 50vh;
+        margin: 0 20px;
+    }
+
+    .works-item .heading-2 {
+        font-size: 30px;
+        line-height: 40px;
+        left: -30px;
+    }
+    
+    .heading-2 span {
+        font-size: 50px;
+    }
+
+    body {
+        justify-content: space-evenly;
+    }
+
+    header {
+        margin-bottom: 0;
+    }
+
+    header h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .works-item {
+        height: 60vh;
+        margin: 0 30px;
+    }
+
+    .works-item .heading-2 {
+        font-size: 40px;
+        line-height: 50px;
+        left: -40px;
+    }
+    
+    .heading-2 span {
+        font-size: 60px;
+    }
+
+}
+
+@media (min-width: 1300px) {
+    .works-item {
+        height: 70vh;
+        margin: 0 70px;
+    }
+
+    .works-item .heading-2 {
+        font-size: 50px;
+        line-height: 60px;
+        left: -80px;
+    }
+    
+    .heading-2 span {
+        font-size: 70px;
+    }
+}
+
+/* 
+@media (min-width: 350px) {
+    .block {
+        width: 280px;
+        height: 280px;
+        margin: 10px 10px 20px 10px;
+    }
+}
+
+@media (min-width: 720px) {
+    .container {
+        margin-top: 80px;
+    }
+    .block {
+        width: 300px;
+        height: 300px;
+        margin: 10px 20px 0 20px;
+    }
+    header {
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        margin-top: 40px;
+    }
+    .block {
+        width: 400px;
+        height: 400px;
+        margin: 10px 40px 0 40px;
+    }
+    header {
+        margin-top: 40px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .container {
+        margin-top: 200px;
+    }
+    .block {
+        width: 600px;
+        height: 600px;
+       
+    }
+} */

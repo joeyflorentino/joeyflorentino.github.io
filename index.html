@@ -6,85 +6,82 @@
         <title>Joey Florentino - Frontend Developer</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" type="text/css" href="assets/slick-theme.css"/>
+        <link rel="stylesheet" href="assets/style.css">
     </head>
     <body>
         <header>
             <div><h1>Joey Florentino</h1><span class="eyebrow">Frontend Developer</span></div>
         </header>
-        <section class="container">
-			<div class="block">
-                <a href="https://www.gurneysresorts.com/" target="_blank">
-                    <img src="images/montauk-gallery-resortmontauk-resort-gallery-1440x1440_0.jpg" alt="Gurney's Resort Montauk">
-				    <div class="eyebrow">Gurney's Resorts</div>
-                </a>
-			</div>
+        <section class="works">
+			
 
-			<div class="block">
+			<div class="works-item">
                 <a href="https://aspenstreetlodge.com/" target="_blank">
-                    <img src="images/Homepage-Hero-Desktop-RET-NAV.jpg" alt="Aspen Street Lodge">
-                    <div class="eyebrow">Aspen Street Lodge</div>
+                    <img src="assets/images/Homepage-Hero-Desktop-RET-NAV.jpg" alt="Aspen Street Lodge">
+                    <h2 class="heading-2">Aspen Street<span>Lodge</span></h2>
                 </a>
 			</div>
 
-            <div class="block">
-                <a href="https://waterlinesquare.com/" target="_blank">
-                    <img src="images/wsq2-livingroom-1.jpg" alt="Waterline Square NYC">
-                    <div class="eyebrow">Waterline Square</div>
+            <div class="works-item">
+                <a href="https://www.gurneysresorts.com/" target="_blank">
+                    <video muted loop src="assets/videos/gurneys.mp4"></video>
+                    <!-- <img src="assets/images/montauk-gallery-resortmontauk-resort-gallery-1440x1440_0.jpg" alt="Gurney's Resort Montauk"> -->
+				    <h2 class="heading-2">Gurney's<span>Resorts</span></h2>
                 </a>
 			</div>
 
-            <div class="block">
+            <div class="works-item">
                 <a href="https://www.coho.com.ph/" target="_blank">
-                    <img src="images/120134275_379698406768166_7531773499598188963_o.jpg" alt="COHO by Vista Land">
-                    <div class="eyebrow">COHO by Vista Land</div>
+                    <img src="assets/images/120134275_379698406768166_7531773499598188963_o.jpg" alt="COHO by Vista Land">
+                    <h2 class="heading-2">Condo Homes<span>Vista Land</span></h2>
                 </a>
 			</div>
 
-			<div class="block">
+           
+
+            <div class="works-item">
                 <a href="https://teviantbeauty.com/" target="_blank">
-                    <img src="images/LipSpell_1000x.png" alt="Teviant">
-                    <div class="eyebrow">Teviant</div>
+                    <video muted loop src="assets/videos/teviant.mp4"></video>
+                    <!-- <img src="assets/images/LipSpell_1000x.png" alt="Teviant"> -->
+                    <h2 class="heading-2"><span>Teviant</span></h2>
                 </a>
 			</div>
+			
 
-            <div class="block">
+            <div class="works-item">
                 <a href="https://planeatprogram.com/" target="_blank">
-                    <img src="images/group-order.png" alt="Plan Eat Program">
-                    <div class="eyebrow">Plan:EAT</div>
+                    <img src="assets/images/group-order.png" alt="Plan Eat Program">
+                    <h2 class="heading-2"><span>Plan:EAT</span></h2>
                 </a>
 			</div>
 
-			<div class="block">
+            <div class="works-item">
+                <a href="https://waterlinesquare.com/" target="_blank">
+                    <video muted loop src="assets/videos/waterline.mp4"></video>
+                    <!-- <img src="assets/images/wsq2-livingroom-1.jpg" alt="Waterline Square NYC"> -->
+                    <h2 class="heading-2">Waterline<span>Square</span></h2>
+                </a>
+			</div>
+
+			<div class="works-item">
                 <a href="https://thewatchstore.com.ph/" target="_blank">
-                    <img src="images/Aries-gold-watch.jpg" alt="The Watch Store">
-                    <div class="eyebrow">The Watch Store</div>
+                    <img src="assets/images/Aries-gold-watch.jpg" alt="The Watch Store">
+                    <h2 class="heading-2">The<span>Watch Store</span></h2>
+                </a>
+			</div>
+
+            <div class="works-item">
+                <a href="http://shoreitup.ph/" target="_blank">
+                    <img src="assets/images/shore-it-up.jpg" alt="The Watch Store">
+                    <h2 class="heading-2"><span>Shore It Up</span></h2>
                 </a>
 			</div>
 
 		</section>
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="script.js"></script>
-        <script>
-
-			var blocks = document.getElementsByClassName('block');
-			var container = document.getElementsByClassName('container');
-			var hs = new HorizontalScroll.default({
-				blocks : blocks,
-				container: container,
-				// isAnimated: true,
-				springEffect: 0.8
-			});
-
-            $('.block img').on('mouseover', function(event){
-                $('.block img').not($(this)).addClass('hover');
-            });
-
-            $('.block img').on('mouseout', function(){
-                $('.block img').not($(this)).removeClass('hover');
-            });
-
-		</script>
+        <script type="text/javascript" src="assets/slick.min.js"></script>
+        <script src="assets/script.js"></script>
     </body>
 </html>
