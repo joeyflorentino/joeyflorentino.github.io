@@ -39,6 +39,15 @@ $('.works').on('beforeChange', function(event, slick, currentSlide, nextSlide){
     $('.slick-active video').trigger("pause");
 });
 
+$('.works').on('wheel', (function(e) {
+    e.preventDefault();
+    if (e.originalEvent.deltaY < 0) {
+    $(this).slick('slickNext');
+    } else {
+    $(this).slick('slickPrev');
+    }
+}));
+
 $(window).on('load', function() {		
 	$('.slick-active video').trigger('play');
 });
