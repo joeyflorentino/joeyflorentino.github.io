@@ -12,6 +12,7 @@ $('.works').slick({
     slidesToShow: 1,
     dots: false,
     arrows: false,
+    infinite: false,
     mobileFirst: true,
     responsive: [
         {
@@ -32,11 +33,11 @@ $('.works').slick({
 });
 
 $('.works').on('afterChange', function(event, slick, currentSlide){
-    $('.slick-active video').trigger('play');
+    $('.slick-current video').trigger('play');
 });
 
 $('.works').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-    $('.slick-active video').trigger("pause");
+    $('.slick-current video').trigger("pause");
 });
 
 $('.works').on('wheel', (function(e) {
@@ -49,5 +50,5 @@ $('.works').on('wheel', (function(e) {
 }));
 
 $(window).on('load', function() {		
-	$('.slick-active video').trigger('play');
+	$('.slick-current video').trigger('play');
 });
