@@ -56,7 +56,7 @@ header h1 {
     display: flex;
 }
 
-.works-item.slick-active .heading-2 {
+.works-item.slick-current .heading-2 {
     opacity: 1;
 }
 
@@ -137,7 +137,7 @@ header h1 {
     animation-name: fadeInUpSD;
 }
 
-.slick-active .heading-2 {
+.slick-current .heading-2 {
     animation-name: fadeInUpSD;
     animation-duration: 1200ms;
     opacity: 1;
