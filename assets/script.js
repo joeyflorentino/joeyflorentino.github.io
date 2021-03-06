@@ -6,11 +6,46 @@
 //     $('.block img').not($(this)).removeClass('hover');
 // });
 
+// $(window).on('resize load', function() {
+//     var win = $(this);
+//     if (win.width() <= 720) {
+//         $('.works').slick('unslick');
+//     } else {
+//         $('.works').slick({
+//             centerMode: true,
+//             centerPadding: '20px',
+//             slidesToShow: 1,
+//             dots: true,
+//             appendDots: $('.works-container').find('.dots'),
+//             arrows: false,
+//             infinite: false,
+//             mobileFirst: true,
+//             responsive: [
+//                 {
+//                 breakpoint: 1300 - 1,
+//                 settings: {
+//                         centerPadding: '180px',
+//                         slidesToShow: 1
+//                     }
+//                 },
+//                 {
+//                 breakpoint: 720,
+//                 settings: {
+//                         centerPadding: '80px',
+//                         slidesToShow: 1
+//                     }
+//                 }
+//             ]
+//         });
+//     }
+// });
+
 $('.works').slick({
     centerMode: true,
     centerPadding: '20px',
     slidesToShow: 1,
-    dots: false,
+    dots: true,
+    appendDots: $('.works-container').find('.dots'),
     arrows: false,
     infinite: false,
     mobileFirst: true,
@@ -31,6 +66,9 @@ $('.works').slick({
         }
     ]
 });
+
+
+
 
 $('.works').on('afterChange', function(event, slick, currentSlide){
     $('.slick-current video').trigger('play');
