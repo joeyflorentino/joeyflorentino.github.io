@@ -1,4 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/Gilroy-Bold.woff2') format('woff2'),
+        url('fonts/Gilroy-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
 
 * {
     margin: 0;
@@ -6,46 +15,57 @@
     box-sizing: border-box;
 }
 
-html, body{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
 body {
     background-color: #161616;
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    overflow: auto;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    color: #848584;
+}
+
+a {
+    text-decoration: none;
     color: #fff;
 }
 
 header {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-header h1 {
-    font-family: 'Work Sans', sans-serif;
-    text-transform: uppercase;
+header div {
+    width: 50%;
+}
+
+header div:nth-last-of-type(1) {
+    text-align: right;
+}
+
+header .heading-1 {
+    color: #fff;
+    font-family: 'Gilroy';
+    text-transform: capitalize;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 32px;
+    font-size: 24px;
+    line-height: 30px;
     letter-spacing: 0.03em;
 }
 
-.eyebrow {
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
+.works-container {
+    display: none;
+    height: 100vh;
 }
 
 .works .slick-list {
@@ -63,7 +83,7 @@ header h1 {
 .works-item {
     position: relative;
     height: 30vh;
-    margin: 0 10px;
+    margin: 0 auto 20px;
 }
 
 .works-item img, .works-item video {
@@ -72,9 +92,6 @@ header h1 {
     width: 100%;
     height: 100%;
     transition: all 600ms;
-}
-
-.works-item img.hover, .works-item video.hover {
     -webkit-filter: grayscale(100%);
        -moz-filter: grayscale(100%);
         -ms-filter: grayscale(100%);
@@ -85,7 +102,7 @@ header h1 {
 
 .works-item .heading-2 {
     opacity: 0;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Gilroy';
     text-transform: uppercase;
     font-weight: 500;
     font-size: 18px;
@@ -102,6 +119,46 @@ header h1 {
     display: block;
     font-size: 34px;
     font-weight: 600;
+}
+
+.dots .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    list-style-type: none;
+}
+
+.dots .slick-dots li {
+    margin: 0 9px;
+}
+
+.dots .slick-dots li.slick-active {
+    border: 1px solid #fff;
+    border-radius: 100%;
+    padding: 6px;
+}
+
+.dots .slick-dots li button {
+    background-color: #515251;
+    border: none;
+    border-radius: 100%;
+    display: block;
+    padding: 0;
+    text-indent: -9999px;
+    height: 6px;
+    width: 6px;
+}
+
+.dots .slick-dots li.slick-active button {
+    background-color: #fff;
+}
+
+.works-container-mobile {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto 40px;
 }
 
 @-webkit-keyframes fadeInUpSD {
@@ -144,7 +201,58 @@ header h1 {
     width: 100%;
 }
 
+.slick-current img, .slick-current video, .works-container-mobile .works-item img, .works-container-mobile .works-item video {
+    -webkit-filter: none;
+       -moz-filter: none;
+        -ms-filter: none;
+         -o-filter: none;
+            filter: none;
+            filter: none;
+}
+
+.works-container-mobile .works-item .heading-2 {
+    opacity: 1;
+}
+
+.contact {
+    position: relative;
+    text-indent: -9999px;
+    display: inline;
+}
+
+.contact:before {
+    content: "Let’s work together!";
+}
+
+.contact:hover::before {
+    content:"joeymflorentino@gmail.com";
+    color: #fff;
+}
+
 @media (min-width: 720px) {
+
+    .works-container {
+        display: block;
+    }
+
+    .works-container-mobile {
+        display: none;
+    }
+
+    body {
+        overflow: hidden;
+    }
+
+    header {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    header .heading-1 {
+        font-size: 28px;
+        line-height: 32px;
+    }
+    
     .works-item {
         height: 50vh;
         margin: 0 20px;
@@ -158,11 +266,6 @@ header h1 {
     
     .heading-2 span {
         font-size: 50px;
-    }
-
-    header h1 {
-        font-size: 40px;
-        line-height: 50px;
     }
 }
 
@@ -200,60 +303,4 @@ header h1 {
     .heading-2 span {
         font-size: 70px;
     }
-
-    body {
-        justify-content: space-evenly;
-    }
-
-    header {
-        margin-bottom: 0;
-    }
 }
-
-/* 
-@media (min-width: 350px) {
-    .block {
-        width: 280px;
-        height: 280px;
-        margin: 10px 10px 20px 10px;
-    }
-}
-
-@media (min-width: 720px) {
-    .container {
-        margin-top: 80px;
-    }
-    .block {
-        width: 300px;
-        height: 300px;
-        margin: 10px 20px 0 20px;
-    }
-    header {
-        margin-top: 20px;
-    }
-}
-
-@media (min-width: 1440px) {
-    .container {
-        margin-top: 40px;
-    }
-    .block {
-        width: 400px;
-        height: 400px;
-        margin: 10px 40px 0 40px;
-    }
-    header {
-        margin-top: 40px;
-    }
-}
-
-@media (min-width: 1600px) {
-    .container {
-        margin-top: 200px;
-    }
-    .block {
-        width: 600px;
-        height: 600px;
-       
-    }
-} */
