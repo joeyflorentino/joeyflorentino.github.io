@@ -18,6 +18,8 @@
 body {
     background-color: #161616;
     overflow: auto;
+
+
 }
 
 p {
@@ -272,7 +274,7 @@ header .heading-1 {
 @media (min-width: 1024px) {
 
     .works-item {
-        height: 55vh;
+        height: 70vh;
         margin: 0 30px;
     }
 
@@ -289,8 +291,8 @@ header .heading-1 {
 }
 
 @media (min-width: 1300px) {
+
     .works-item {
-        height: 70vh;
         margin: 0 70px;
     }
 
@@ -303,4 +305,12 @@ header .heading-1 {
     .heading-2 span {
         font-size: 70px;
     }
+}
+
+@media (min-width: 1600px) {
+
+    body {
+        padding-top: 3%;
+    }
+
 }
